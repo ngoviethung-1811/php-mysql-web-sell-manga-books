@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaShop - Trang quản trị</title>
+    <link rel="icon" href="../includes/logo.jpg" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../includes/admin_style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="../php_admin/index.php"><img src="../includes/logo.jpg" alt="logo"></a>
+            </div>
+            <h2 id="caption">Trang quản trị Manga Shop</h2>
+            <ul> 
+                <?php
+                session_start();
+                if (isset($_SESSION['user'])) {
+                    if ($_SESSION['user']['role']==='kh'){
+                        header('Location: ../php_customer/index.php');
+                        exit();
+                    }
+
+                    echo '<li><a href="../php_admin/profile.php">Thông tin</a></li>';
+                    echo '<li><a href="../php_customer/logout.php">Đăng xuất</a></li>';
+                } else {
+                    header('Location: ../php_customer/index.php');
+                }
+                ?>
+            </ul>
+        </div>
+    </nav>
+    <ul id="navigation">
+        <li><a id="index" href="../php_admin/index.php">Trang chủ</a></li>
+        <li><a id="hienthi_NguoiDung" href="../php_admin/hienthi_NguoiDung.php">Người dùng</a></li>
+        <li><a id ="hienthi_PTVC"href="../php_admin/hienthi_PTVC.php">PT vận chuyển</a></li>
+        <li><a id ="hienthi_NXB"href="../php_admin/hienthi_NXB.php">Nhà xuất bản</a></li>
+        <li><a id ="hienthi_TacGia"href="../php_admin/hienthi_TacGia.php">Tác giả</a></li>
+        <li><a id="hienthi_TheLoai" href="../php_admin/hienthi_TheLoai.php">Thể loại</a></li>
+        <li><a id ="hienthi_Series"href="../php_admin/hienthi_Series.php">Series</a></li>
+        <li><a id="hienthi_Truyen" href="../php_admin/hienthi_Truyen.php">Truyện</a></li>
+        <li><a id ="hienthi_KM"href="../php_admin/hienthi_KM.php">Khuyến mãi</a></li>
+        <li><a id ="hienthi_LKM"href="../php_admin/hienthi_LKM.php">Loại khuyến mãi</a></li>
+        <li><a id="hienthi_HoaDon" href="../php_admin/hienthi_HoaDon.php">Hóa đơn</a></li>
+        <li><a id="baocao" href="baocao.php">Lập báo cáo</a></li>
+    </ul>
+</header>

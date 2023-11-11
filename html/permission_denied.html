@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaShop</title>
+    <link rel="icon" href="../includes/logo.jpg" type="image/png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        header{
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-image: url('../includes/header.jpg');
+            background-size: cover;
+        }
+
+        nav{
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        nav .logo a img {
+            display: flex;
+            height: 100%;
+            width: 5rem;
+            position: absolute;
+            z-index: 1;
+            top: 0; 
+        }
+        nav .menu{
+            max-width: 1200px;
+            margin:auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        .menu a{
+            text-decoration: none;
+            color: pink;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 10px 20px;
+        }
+        .menu a:hover{
+            background: yellow;
+            color: #000;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        #caption {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="../php_customer/index.php"><img src="../includes/logo.jpg" alt="logo"></a>
+            </div>
+            <h2 id="caption">Manga Shop</h2>
+        </div>
+    </nav>
+</header>
+<div align="center" style="height: 10rem;">
+    <h1 style="color: red;">403 - Forbidden</h1>
+    <p>Bạn không có quyền truy cập trang!</p>
+</div>
+</body>
+</html>

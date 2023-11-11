@@ -1,0 +1,96 @@
+main {
+    padding: 1rem;
+}
+table {
+    border-collapse:collapse;
+    margin: 1rem auto;
+    width: 70%;
+    text-align: center;
+}
+th {
+    padding: 0.5rem;
+    text-align: center;
+    background: #f7baf1;
+    border: 0.5px solid #7d7d7d;
+}
+td {
+    padding: 0.5rem;
+    border: 0.5px solid gainsboro;
+}
+.changeQuantity {
+    background: #dadada;
+    border: solid 1px #dcdcdc;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    outline: none;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    border-radius: 0;
+    color: #7d7d7d;
+    opacity: 0.9;
+}
+.changeQuantity:hover {
+    opacity: 1;
+}
+.quantity {
+    background: #f9f9f9;
+    color: #7d7d7d;
+    font-weight: 500;
+    height: 32px;
+    padding: 0;
+    text-align: center;
+    width: 60px;
+    border: 1px solid #efefef;
+    border-left: none;
+    border-right: none;
+    border-radius: 1px;
+}
+.btnXoa {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: #f44336;
+    color: white;
+}
+.btnXoa:hover {
+    opacity: 1;
+}
+#btnCapNhat {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: green;
+    color: white;
+}
+#btnCapNhat:hover {
+    opacity: 1;
+}
+#goback {
+    text-decoration: none;
+    color: blue;
+    opacity: 0.7;
+}
+#goback:hover {
+    opacity: 1;
+}
+#btnThanhToan {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.9;
+    background-color: black;
+    color: white;
+}
+#btnThanhToan:hover {
+    opacity: 1;
+}
+#thaotac {
+    border: none;
+}

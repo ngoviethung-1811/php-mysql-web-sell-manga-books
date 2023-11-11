@@ -1,0 +1,71 @@
+main {
+  padding: 1rem;
+}
+.pageCaption {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+table {
+  width: 60%; 
+  margin: 1rem auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+td {
+  padding: 0.3rem;
+  border: 1px solid #000;
+}
+.anhbia {
+  max-width: 100%;
+  max-height: 100%;
+}
+.pagination {
+  display: inline-block;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: grey;
+  color: white;
+  border-radius: 5px;
+}
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.pagination a.disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.linkTruyen {
+  text-decoration: none;
+  color: blue;
+  opacity: 0.93;
+}
+.linkTruyen:hover {
+  opacity: 1;
+}
+.btnAdd {
+  width: fit-content;
+  padding: 7px 10px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9; 
+  background-color: #07b351;
+  color: white;
+}
+.btnAdd:hover{
+  opacity: 1;
+}
+.btnDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+  background-color: #b31e07;
+  text-decoration: line-through;
+}

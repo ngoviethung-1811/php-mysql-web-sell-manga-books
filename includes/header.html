@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MangaShop</title>
+    <link rel="icon" href="../includes/logo.jpg" type="image/png">
+    <link rel="stylesheet" type="text/css" href="../includes/style.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu">
+            <div class="logo">
+                <a href="../php_customer/index.php"><img src="../includes/logo.jpg" alt="logo"></a>
+            </div>
+            <form method="get" action="timkiem.php">
+                <div class="search-bar">
+                    <input type="text" name="search" placeholder="Tên truyện">
+                    <button type="submit">Tìm</button>
+                </div>
+            </form>
+            <ul> 
+                <?php
+                    session_start();
+                    if (isset($_SESSION['user'])) {
+                        if ($_SESSION['user']['role']!=='kh'){
+                            header('Location: ../php_admin/index.php');
+                            exit();
+                        }
+
+                        echo '<li><a href="../php_customer/profile.php">Thông tin</a></li>';
+                        echo '<li><a href="../php_customer/logout.php">Đăng xuất</a></li>';
+                    } else {
+                        echo '<li><a href="../php_customer/login.php">Đăng nhập</a></li>';
+                        echo '<li><a href="../php_customer/register.php">Đăng ký</a></li>';
+                    }
+
+                    $txtQuantity = '';
+                    $quantity = 0;
+                    if(isset($_SESSION['cart'])) {
+                        $cart = $_SESSION['cart'];
+                        foreach ($cart as $c) {
+                            $quantity += $c['soLuong'];
+                        }
+                    }
+                    if ($quantity>0) $txtQuantity = "($quantity)";
+                ?>
+                <li><a href="giohang.php">Giỏ hàng <?php echo $txtQuantity; ?></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
